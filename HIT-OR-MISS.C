@@ -1,0 +1,39 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<time.h>
+#include<conio.h>
+void main()
+{
+   int i,n,x,y,hit=0,miss=0;
+   clrscr();
+   printf("enter no. of events to occur: ");
+   scanf("%d",&n);
+   clrscr();
+   randomize();
+   for(i=1;i<=n;i++)
+   {
+      gotoxy(i,1);
+      x=random(10);
+      printf("%d\n",x);
+      delay(1500);
+      if(kbhit()!=0)
+	 y=getch();
+      if(x==(y-48))
+      {
+	 printf("hit");
+	 hit++;
+      }
+      else
+      {
+	 printf("miss");
+	 miss++;
+      }
+      y=1000;
+      flushall();
+      clrscr();
+   }
+   printf("hit=%d\tmiss=%d",hit,miss);
+   getch();
+   getch();
+   getch();
+}
