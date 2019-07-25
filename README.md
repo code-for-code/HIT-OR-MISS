@@ -1,1 +1,1 @@
-# HIT-OR-MISS
+Press the digit shown on screen as soon
